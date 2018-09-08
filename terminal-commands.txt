@@ -1,0 +1,24 @@
+Questions
+
+1. How do you import a module?
+You require the module, using code such as:
+
+const myLibrary = require(‘./my-library’);
+
+2. What JavaScript statement do you use to export a module?
+
+module.exports = {
+	myExportMethod: () => {
+		console.log(‘This is an example of exporting a module’);
+	},
+};
+
+Online Research Questions
+
+1. Are there other ways to export a module?
+
+According to my research, module.exports is the agree-upon solution for Node. Some developers use exports by assigning that to module.exports, but that requires re-pointing it to the correct code because it is not built-in the way module.exports is. It’s recommended that new developers begin first with module.exports for a clear understanding.
+
+2. What are ES6 modules and how do they differ from the module we created in this checkpoint?
+
+The modules we created are not native JS, but instead use CommonJS. ES6 modules were introduced as built-in modules, however they are not currently supported by any Javascript engine. That means they still need a transpolar, such as Babel, which ultimately converts them to CommonJS. However, they will likely be supported in the future. ES6 modules can be executed both synchronously and asynchronously, unlike the modules we created, which are only synchronous. In addition ES6 modules use import/expert much in the manner of JS frameworks, such as React. For new devs, the ES6 syntax may be slightly easier to work with.
